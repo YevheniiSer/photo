@@ -58,8 +58,8 @@ img {
     flex-direction: column;
     justify-content: space-between;
     display: flex;
+    transition: background-image 3s ease-in-out;
 }
-
 /*----container----*/
 .logo-text {
     display: flex;
@@ -81,8 +81,7 @@ img {
 .logo-container-text {
     width: 200px;
 }
-.logo-container {
-}
+
 .top-container {
     display: flex;
     justify-content: space-between;
@@ -141,7 +140,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: -2;
 }
 .slider {
     height: 100vh;
@@ -150,7 +149,6 @@ img {
     background-size: cover;
     background-position: center;
     animation: animate 15s infinite;
-    background-blend-mode: exclusion;
 }
 
 @keyframes animate {
@@ -175,6 +173,28 @@ img {
         background-size: cover;
     }
 }
+.bckd-container {
+    position: absolute;
+}
+.top-container:hover .bckd-container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 10%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.8) 90%);
+}
+.bottom-container:hover .bckd-container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 10%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.8) 90%);
+}
+
 /*-----slider-----*/
 
 
@@ -250,7 +270,7 @@ img {
     z-index: 999;
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 47, 66, 0.40);
+    background-color: rgba(0, 0, 0, 0.80);
 
     opacity: 0;
     visibility: hidden;
