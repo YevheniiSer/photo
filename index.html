@@ -14,6 +14,9 @@
     
   </head>
   <body>
+    <div class="mid slider">
+
+    </div>
     <div class="container">
       <div class="top-container">
         <div class="logo-container">
@@ -32,6 +35,103 @@
           </ul>
         </div>
       </div>
+      <div class="bottom-container">
+        <div class="social-media">
+          <ul class="footer-list">
+            <li class="footer-title-icon">
+              <a class="footer-icon-link" href="tel:+30985258922">
+                <svg class="footer-icon" width="32" 
+                  height="32"
+                  aria-label="icon-phone">
+                  <use 
+                  href="./images/icons.svg#icon-phone" ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-title-icon">
+              <a class="footer-icon-link" href="tel:+30985258922">
+                <svg class="footer-icon" width="32" height="32" aria-label="icon-instagram">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-title-icon">
+              <button data-modal-open class="footer-icon-link" type="button">
+                <svg class="footer-icon" width="32" height="32" aria-label="icon-bubble2">
+                  <use href="./images/icons.svg#icon-bubble2"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <!--backdrop-->
+    <div class="backdrop-container" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-btn-icon" width="8" height="8" aria-label="">
+            <use href="./images/icons.svg#icon-close-black">
+            </use>
+          </svg>
+        </button>
+        <p class="form-description">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="form-window">
+          <div class="form-window-field">
+            <label class="form-field-label" for="user-name">Name</label>
+            <div class="form-window-input-field">
+              <input class="form-field-input" type="text" id="user-name" name="user-name" pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐ’]+"
+                title="Servetnyk Yevhenii" required>
+              <svg class="form-field-icon" width="18" height="24" aria-label="name-icon">
+                <use href="./images/icons.svg#icon-person">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-window-field">
+            <label class="form-field-label" for="user-phone">Phone</label>
+            <div class="form-window-input-field">
+              <input class="form-field-input" type="tel" id="user-phone" name="user-phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" required>
+              <svg class="form-field-icon" width="18" height="24" aria-label="phone-icon">
+                <use href="./images/icons.svg#icon-phone">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-window-field">
+            <label class="form-field-label" for="user-email">Email</label>
+            <div class="form-window-input-field">
+              <input class="form-field-input" type="email" id="user-email" name="user-email" required>
+              <svg class="form-field-icon" width="18" height="24" aria-label="email-icon">
+                <use href="./images/icons.svg#icon-email">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-window-field-textaria">
+            <label class="form-field-label" for="user-comment">Comment</label>
+            <textarea class="form-comment" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
+          </div>
+          <div class="form-checkbox-wrapper">
+            <input class="form-checkbox visually-hidden" type="checkbox" id="user-privacy" name="user-privacy" value="true"
+              required>
+            <label for="user-privacy" class="form-checkbox-label">
+              <span class="form-checkbox-own">
+                <svg class="form-checkbox-own-icon" width="10" height="8" aria-label="checkmark icon">
+                  <use href="./images/icons.svg#icon-property"></use>
+                </svg>
+              </span>
+              <span class="user-privacy-span">I accept the terms and conditions of the
+                <a class="form-privacy-link" href="">Privacy Policy</a></span>
+            </label>
+          </div>
+          <button class="form-submit" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="modal.js"></script>
   </body>
 </html>
